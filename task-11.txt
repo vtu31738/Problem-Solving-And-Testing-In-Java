@@ -1,0 +1,23 @@
+class Solution {
+public int[] shuffle(int[] nums, int n) {
+
+    int i = 1;
+    int j = n;
+    int v = 0;
+    int k = 0;
+
+    while(j<nums.length-1){
+       v = nums[j];
+       k=j;
+       while(k>i){
+        nums[k] = nums[k-1];
+        k--;
+       }
+       nums[k]=v;
+
+        i+=2;
+        j++;
+    }
+    return nums;
+}
+}
